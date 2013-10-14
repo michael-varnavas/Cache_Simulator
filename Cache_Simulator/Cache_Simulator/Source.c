@@ -489,7 +489,7 @@ printf("Each block has %d word (Word Size: %d Byte)\n",words_in_block,word_size_
 			random_num=rand() % ((int)(ram_size)-1);	//generate random number for reference
 			dec2bin(random_num,rem);					//transform number to binary
 			random_num2=rand()%3;						//random number for command
-			if((counter)>=((NUM_MUL*ram_size)/num_of_flush))	//controls the frequency of flushes
+			if((num_of_flush!=0)&&((counter)>=((NUM_MUL*ram_size)/num_of_flush)))	//controls the frequency of flushes
 			{
 				random_num2=rand()%4;
 				if(random_num2==3)
