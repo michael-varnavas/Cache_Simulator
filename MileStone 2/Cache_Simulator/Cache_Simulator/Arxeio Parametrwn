@@ -4,12 +4,12 @@ Word Size: 4
 Write (Back(0)/Through(1)): 0
 Write (No Allocate(0)/Allocate(1)): 0
 Words in Block: 2
-Type of Cache(D Mapped(0)/Fully Associative(1)/N-Ways(2)): 1
+Type of Cache(D Mapped(0)/Fully Associative(1)/N-Ways(2)): 2
 Data Multiplier: 3
 Number of Ways: 4
 Number of Flushes: 3
 Cycles Read from Cache: 3
-Cycles Read from RAM: 3
-Cycles Write to RAM: 3
-Cycles Write to Cache: 3
-Policy(FIFO(0)/LRU(1)/RANDOM(2)): 2
+Cycles Read from RAM: 5
+Cycles Write to RAM: 5
+Cycles Write to Cache: 4
+Policy(FIFO(0)/LRU(1)/RANDOM(2)): 0

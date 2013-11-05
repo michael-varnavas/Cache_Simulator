@@ -302,7 +302,7 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 			fprintf(fp,"%d",address[k]);
 		}
 		address_dec=bin2dec(address,k-1);
-		fprintf(fp," (%d) \t",address_dec);
+		
 		fprintf(fp,"   |   ");										//Print selected command
 		switch ((char)command)
 		{
@@ -483,7 +483,7 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 										count_cycles=count_cycles+read_cycles_cache+write_cycles_ram;
 										icycles=read_cycles_cache+write_cycles_ram;
 									}
-									
+									replaced=conductor->block_offset[block_offset];
 									conductor->block_offset[block_offset]=address_dec;
 									conductor->valid=1;
 									conductor->dirty=1;
@@ -608,6 +608,7 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 		fprintf(fp,"\tInstruction Cycles: %d",icycles);
 		if(((char)command=='W')&&(hit_flag==0)&&(replaced!=-1))
 		fprintf(fp,"\tReplaced: %d",replaced);
+		fprintf(fp,"\t\t\t\t\t\tReference Address in decimal: (%d) ",address_dec);
 		fprintf(fp,"\n");
 
 		fscanf_s(input,"%c",&ch,1);
@@ -1330,6 +1331,7 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 		fprintf(fp,"\tInstruction Cycles: %d",icycles);
 		if(((char)command=='W')&&(hit_flag==0)&&(replaced!=-1))
 		fprintf(fp,"\tReplaced: %d",replaced);
+		fprintf(fp,"\t\t\t\t\t\tReference Address in decimal: (%d) ",address_dec);
 				fprintf(fp,"\n");
 		
 		
@@ -1995,6 +1997,7 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 				fprintf(fp,"\tInstruction Cycles: %d",icycles);
 				if(((char)command=='W')&&(hit_flag==0)&&(replaced!=-1))
 				fprintf(fp,"\tReplaced: %d",replaced);
+				fprintf(fp,"\t\t\t\t\t\tReference Address in decimal: (%d) ",address_dec);
 				fprintf(fp,"\n");
 		}
 		fprintf(fp,"\nTotal Cycles: %d\n",count_cycles);
@@ -2067,6 +2070,18 @@ checkbase_int=checkbase_double;
 		system("pause");
 		return 1;
 	}
+	if((Write_Back_Through>1)||(Write_Back_Through< 0))
+	{
+		printf("ERROR!: Check Arxeio Parametrwn (Write Back/Through)\n");			
+		system("pause");
+		return 1;
+	}
+	if((Write_Allocate> 1)||(Write_Allocate< 0))
+	{
+		printf("ERROR!: Check Arxeio Parametrwn (Write Allocate)\n");			
+		system("pause");
+		return 1;
+	}
 	if(cache_size_bytes>ram_size_bytes)
 	{
 		printf("ERROR!: The size of Cache MUST NOT exceed the size of RAM\n");		//cache size exceeds ram size error
@@ -2135,6 +2150,18 @@ checkbase_int=checkbase_double;
 	if(type_of_cache==2 && num_of_ways<=0)
 	{
 		printf("ERROR!: The amount of ways is a negative number or zero\n");							//Not a power of 2 error
+		system("pause");
+		return 1;
+	}
+	if((policy>2) || (policy<0))
+	{
+		printf("ERROR!: Check your policy\n");							//Not a power of 2 error
+		system("pause");
+		return 1;
+	}
+	if((read_cycles_cache<0) || (read_cycles_ram<0)|| (write_cycles_cache<0)|| (write_cycles_ram<0))
+	{
+		printf("ERROR!: one or more of the cycles penalties are negative\n");							//Not a power of 2 error
 		system("pause");
 		return 1;
 	}
