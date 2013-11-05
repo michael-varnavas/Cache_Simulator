@@ -541,15 +541,15 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 							{
 								if(conductor->block_offset[block_offset]==address_dec)
 								{
-									count_cycles=count_cycles+read_cycles_cache;
+									
 									hit_flag=1;
-									icycles=read_cycles_cache;
+									icycles=read_cycles_cache+write_cycles_cache;
 									count_cycles=count_cycles+icycles;
 								}
 								else
 								{
-									count_cycles=count_cycles+read_cycles_cache+read_cycles_ram;
-									icycles=read_cycles_cache+read_cycles_ram;
+									count_cycles=count_cycles+read_cycles_cache+read_cycles_ram+write_cycles_cache;
+									icycles=read_cycles_cache+read_cycles_ram+write_cycles_cache;
 									compulsory=0;
 									conflict=1;
 								
@@ -557,8 +557,8 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 							}
 							else
 							{
-									count_cycles=count_cycles+read_cycles_cache+read_cycles_ram;
-									icycles=read_cycles_cache+read_cycles_ram;
+									count_cycles=count_cycles+read_cycles_cache+read_cycles_ram+write_cycles_cache;
+									icycles=read_cycles_cache+read_cycles_ram+write_cycles_cache;
 									if(conductor->valid==0)
 									{
 										compulsory=1;
@@ -619,6 +619,7 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 fprintf(fp,"\nTotal Cycles: %d\n",count_cycles);
 fprintf(fp,"\nHit Rate: %.2f %%\n",(hit_counter/(double)(NUM_MUL*ram_size))*100);
 fprintf(fp,"\nMiss Rate: %.2f %%\n",(100-(hit_counter/(double)(NUM_MUL*ram_size))*100));
+fprintf(fp,"\nTotal references: %d\n",(NUM_MUL*ram_size));
 conductor=root;
 while(conductor->next!=0)
 {
@@ -1246,8 +1247,8 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 							{
 								if(conductor->block_offset[block_offset]==address_dec)
 								{
-									count_cycles=count_cycles+read_cycles_cache;
-									icycles=read_cycles_cache;
+									count_cycles=count_cycles+read_cycles_cache+write_cycles_cache;
+									icycles=read_cycles_cache+write_cycles_cache;
 									hit_flag=1;
 									conductor->use_time=0;
 								
@@ -1256,8 +1257,8 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 								else
 								{
 									if(read_flag==0){
-									count_cycles=count_cycles+read_cycles_cache+read_cycles_ram;
-									icycles=read_cycles_cache+read_cycles_ram;
+									count_cycles=count_cycles+read_cycles_cache+read_cycles_ram+write_cycles_cache;
+									icycles=read_cycles_cache+read_cycles_ram+write_cycles_cache;
 									read_flag=1;
 									}
 									compulsory=0;
@@ -1269,8 +1270,8 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 							else
 							{
 									if(read_flag==0){
-									count_cycles=count_cycles+read_cycles_cache+read_cycles_ram;
-									icycles=read_cycles_cache+read_cycles_ram;
+									count_cycles=count_cycles+read_cycles_cache+read_cycles_ram+write_cycles_cache;
+									icycles=read_cycles_cache+read_cycles_ram+write_cycles_cache;
 									read_flag=1;
 									}
 									if(conductor->valid==0)
@@ -1350,6 +1351,7 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 fprintf(fp,"\nTotal Cycles: %d\n",count_cycles);
 fprintf(fp,"\nHit Rate: %.2f %%\n",(hit_counter/(double)(NUM_MUL*ram_size))*100);
 fprintf(fp,"\nMiss Rate: %.2f %%\n",(100-(hit_counter/(double)(NUM_MUL*ram_size))*100));
+fprintf(fp,"\nTotal references: %d\n",(NUM_MUL*ram_size));
 conductor=root;
 while(conductor->next!=0)
 {
@@ -2003,6 +2005,7 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 		fprintf(fp,"\nTotal Cycles: %d\n",count_cycles);
 		fprintf(fp,"\nHit Rate: %.2f %%\n",(hit_counter/(double)(NUM_MUL*ram_size))*100);
 		fprintf(fp,"\nMiss Rate: %.2f %%\n",(100-(hit_counter/(double)(NUM_MUL*ram_size))*100));
+		fprintf(fp,"\nTotal references: %d\n",(NUM_MUL*ram_size));
 conductor = root;
 	while(conductor->next!=0)
 	{
