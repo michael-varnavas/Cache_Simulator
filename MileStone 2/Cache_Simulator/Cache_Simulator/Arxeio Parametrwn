@@ -1,0 +1,15 @@
+Cache Size: 16
+RAM Size: 32
+Word Size: 4
+Write (Back(0)/Through(1)): 0
+Write (No Allocate(0)/Allocate(1)): 0
+Words in Block: 2
+Type of Cache(D Mapped(0)/Fully Associative(1)/N-Ways(2)): 0
+Data Multiplier: 3
+Number of Ways: 4
+Number of Flushes: 1
+Cycles Read from Cache: 3
+Cycles Read from RAM: 3
+Cycles Write to RAM: 3
+Cycles Write to Cache: 3
+Policy(FIFO(0)/LRU(1)/RANDOM(2)): 2

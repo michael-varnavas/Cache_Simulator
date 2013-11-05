@@ -1,0 +1,30 @@
+Address: 101 (5) 	   |   Command: Read   |   Tag: 1  |  Index: 0  |  block Offset: 1	(Miss!)	(Compulsory)	Instruction Cycles: 6
+Address: 011 (3) 	   |   Command: Modify |   Tag: 0  |  Index: 1  |  block Offset: 1	(Miss!)	(Compulsory)	Instruction Cycles: 6
+Address: 001 (1) 	   |   Command: Write  |   Tag: 0  |  Index: 0  |  block Offset: 1	(Miss!)					Instruction Cycles: 9
+Address: 101 (5) 	   |   Command: Read   |   Tag: 1  |  Index: 0  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 110 (6) 	   |   Command: Read   |   Tag: 1  |  Index: 1  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 6
+Address: 010 (2) 	   |   Command: Write  |   Tag: 0  |  Index: 1  |  block Offset: 0	(Miss!)					Instruction Cycles: 9
+Address: 001 (1) 	   |   Command: Write  |   Tag: 0  |  Index: 0  |  block Offset: 1	(Hit!)					Instruction Cycles: 6
+Address: 101 (5) 	   |   Command: Read   |   Tag: 1  |  Index: 0  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 011 (3) 	   |   Command: Modify |   Tag: 0  |  Index: 1  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 101 (5) 	   |   Command: Modify |   Tag: 1  |  Index: 0  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 001 (1) 	   |   Command: Write  |   Tag: 0  |  Index: 0  |  block Offset: 1	(Hit!)					Instruction Cycles: 6
+Address: 000 (0) 	   |   Command: Read   |   Tag: 0  |  Index: 0  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 001 (1) 	   |   Command: Write  |   Tag: 0  |  Index: 0  |  block Offset: 1	(Hit!)					Instruction Cycles: 6
+Address: 101 (5) 	   |   Command: Read   |   Tag: 1  |  Index: 0  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 011 (3) 	   |   Command: Modify |   Tag: 0  |  Index: 1  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 001 (1) 	   |   Command: Read   |   Tag: 0  |  Index: 0  |  block Offset: 1	(Hit!)					Instruction Cycles: 3
+Address: 010 (2) 	   |   Command: Read   |   Tag: 0  |  Index: 1  |  block Offset: 0	(Hit!)					Instruction Cycles: 3
+Address: 110 (6) 	   |   Command: Write  |   Tag: 1  |  Index: 1  |  block Offset: 0	(Miss!)					Instruction Cycles: 12	Replaced: 2
+Address: 110 (6) 	   |   Command: Read   |   Tag: 1  |  Index: 1  |  block Offset: 0	(Hit!)					Instruction Cycles: 3
+Address: 011 (3) 	   |   Command: Read   |   Tag: 0  |  Index: 1  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 010 (2) 	   |   Command: Write  |   Tag: 0  |  Index: 1  |  block Offset: 0	(Miss!)					Instruction Cycles: 12	Replaced: 6
+Address: 110 (6) 	   |   Command: Write  |   Tag: 1  |  Index: 1  |  block Offset: 0	(Miss!)					Instruction Cycles: 12	Replaced: 2
+Address: 011 (3) 	   |   Command: Write  |   Tag: 0  |  Index: 1  |  block Offset: 1	(Miss!)					Instruction Cycles: 12	Replaced: 6
+Address: 101 (5) 	   |   Command: Write  |   Tag: 1  |  Index: 0  |  block Offset: 1	(Miss!)					Instruction Cycles: 12	Replaced: 1
+
+Total Cycles: 180
+
+Hit Rate: 25.00 %
+
+Miss Rate: 75.00 %
