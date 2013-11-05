@@ -1,30 +1,774 @@
-Address: 101 (5) 	   |   Command: Read   |   Tag: 1  |  Index: 0  |  block Offset: 1	(Miss!)	(Compulsory)	Instruction Cycles: 6
-Address: 011 (3) 	   |   Command: Modify |   Tag: 0  |  Index: 1  |  block Offset: 1	(Miss!)	(Compulsory)	Instruction Cycles: 6
-Address: 001 (1) 	   |   Command: Write  |   Tag: 0  |  Index: 0  |  block Offset: 1	(Miss!)					Instruction Cycles: 9
-Address: 101 (5) 	   |   Command: Read   |   Tag: 1  |  Index: 0  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
-Address: 110 (6) 	   |   Command: Read   |   Tag: 1  |  Index: 1  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 6
-Address: 010 (2) 	   |   Command: Write  |   Tag: 0  |  Index: 1  |  block Offset: 0	(Miss!)					Instruction Cycles: 9
-Address: 001 (1) 	   |   Command: Write  |   Tag: 0  |  Index: 0  |  block Offset: 1	(Hit!)					Instruction Cycles: 6
-Address: 101 (5) 	   |   Command: Read   |   Tag: 1  |  Index: 0  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
-Address: 011 (3) 	   |   Command: Modify |   Tag: 0  |  Index: 1  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
-Address: 101 (5) 	   |   Command: Modify |   Tag: 1  |  Index: 0  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
-Address: 001 (1) 	   |   Command: Write  |   Tag: 0  |  Index: 0  |  block Offset: 1	(Hit!)					Instruction Cycles: 6
-Address: 000 (0) 	   |   Command: Read   |   Tag: 0  |  Index: 0  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
-Address: 001 (1) 	   |   Command: Write  |   Tag: 0  |  Index: 0  |  block Offset: 1	(Hit!)					Instruction Cycles: 6
-Address: 101 (5) 	   |   Command: Read   |   Tag: 1  |  Index: 0  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
-Address: 011 (3) 	   |   Command: Modify |   Tag: 0  |  Index: 1  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
-Address: 001 (1) 	   |   Command: Read   |   Tag: 0  |  Index: 0  |  block Offset: 1	(Hit!)					Instruction Cycles: 3
-Address: 010 (2) 	   |   Command: Read   |   Tag: 0  |  Index: 1  |  block Offset: 0	(Hit!)					Instruction Cycles: 3
-Address: 110 (6) 	   |   Command: Write  |   Tag: 1  |  Index: 1  |  block Offset: 0	(Miss!)					Instruction Cycles: 12	Replaced: 2
-Address: 110 (6) 	   |   Command: Read   |   Tag: 1  |  Index: 1  |  block Offset: 0	(Hit!)					Instruction Cycles: 3
-Address: 011 (3) 	   |   Command: Read   |   Tag: 0  |  Index: 1  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
-Address: 010 (2) 	   |   Command: Write  |   Tag: 0  |  Index: 1  |  block Offset: 0	(Miss!)					Instruction Cycles: 12	Replaced: 6
-Address: 110 (6) 	   |   Command: Write  |   Tag: 1  |  Index: 1  |  block Offset: 0	(Miss!)					Instruction Cycles: 12	Replaced: 2
-Address: 011 (3) 	   |   Command: Write  |   Tag: 0  |  Index: 1  |  block Offset: 1	(Miss!)					Instruction Cycles: 12	Replaced: 6
-Address: 101 (5) 	   |   Command: Write  |   Tag: 1  |  Index: 0  |  block Offset: 1	(Miss!)					Instruction Cycles: 12	Replaced: 1
+Address: 11110010   |   Command: Read   |   Tag: 1111001  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 6
+Address: 10010000   |   Command: Modify |   Tag: 1001000  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 6
+Address: 11111110   |   Command: Write  |   Tag: 1111111  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9
+Address: 00001000   |   Command: Read   |   Tag: 0000100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01001011   |   Command: Write  |   Tag: 0100101  |  block Offset: 1	(Miss!)	(Compulsory)	Instruction Cycles: 9
+Address: 11100011   |   Command: Modify |   Tag: 1110001  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00100001   |   Command: Modify |   Tag: 0010000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00100000   |   Command: Read   |   Tag: 0010000  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11100100   |   Command: Modify |   Tag: 1110010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11100101   |   Command: Read   |   Tag: 1110010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01100100   |   Command: Modify |   Tag: 0110010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10101010   |   Command: Modify |   Tag: 1010101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01101000   |   Command: Modify |   Tag: 0110100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00111000   |   Command: Modify |   Tag: 0011100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11101011   |   Command: Read   |   Tag: 1110101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01100001   |   Command: Write  |   Tag: 0110000  |  block Offset: 1	(Miss!)	(Compulsory)	Instruction Cycles: 9
+Address: 11110000   |   Command: Write  |   Tag: 1111000  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9
+Address: 00111010   |   Command: Modify |   Tag: 0011101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00111001   |   Command: Read   |   Tag: 0011100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01001000   |   Command: Modify |   Tag: 0100100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10001000   |   Command: Read   |   Tag: 1000100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00110110   |   Command: Write  |   Tag: 0011011  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9
+Address: 10111100   |   Command: Write  |   Tag: 1011110  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9
+Address: 00111100   |   Command: Modify |   Tag: 0011110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01100010   |   Command: Modify |   Tag: 0110001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11110110   |   Command: Modify |   Tag: 1111011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10110001   |   Command: Write  |   Tag: 1011000  |  block Offset: 1	(Miss!)	(Compulsory)	Instruction Cycles: 9
+Address: 00111100   |   Command: Read   |   Tag: 0011110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11111010   |   Command: Modify |   Tag: 1111101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10010011   |   Command: Modify |   Tag: 1001001  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00011011   |   Command: Read   |   Tag: 0001101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10011110   |   Command: Write  |   Tag: 1001111  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9
+Address: 10110010   |   Command: Write  |   Tag: 1011001  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9
+Address: 11001010   |   Command: Read   |   Tag: 1100101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10001100   |   Command: Modify |   Tag: 1000110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01001100   |   Command: Read   |   Tag: 0100110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01111111   |   Command: Write  |   Tag: 0111111  |  block Offset: 1	(Miss!)	(Compulsory)	Instruction Cycles: 9
+Address: 00100000   |   Command: Write  |   Tag: 0010000  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9
+Address: 00000111   |   Command: Modify |   Tag: 0000011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01001101   |   Command: Write  |   Tag: 0100110  |  block Offset: 1	(Miss!)	(Compulsory)	Instruction Cycles: 9
+Address: 01010100   |   Command: Read   |   Tag: 0101010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00101100   |   Command: Modify |   Tag: 0010110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10010101   |   Command: Write  |   Tag: 1001010  |  block Offset: 1	(Miss!)	(Compulsory)	Instruction Cycles: 9
+Address: 10110000   |   Command: Write  |   Tag: 1011000  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9
+Address: 11011010   |   Command: Write  |   Tag: 1101101  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9
+Address: 00111010   |   Command: Read   |   Tag: 0011101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00000010   |   Command: Modify |   Tag: 0000001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10010110   |   Command: Read   |   Tag: 1001011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00010010   |   Command: Write  |   Tag: 0001001  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 97
+Address: 00111001   |   Command: Read   |   Tag: 0011100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00110011   |   Command: Modify |   Tag: 0011001  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01110101   |   Command: Read   |   Tag: 0111010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01111110   |   Command: Modify |   Tag: 0111111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00001111   |   Command: Modify |   Tag: 0000111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00100101   |   Command: Read   |   Tag: 0010010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11011000   |   Command: Modify |   Tag: 1101100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11110100   |   Command: Modify |   Tag: 1111010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11011001   |   Command: Read   |   Tag: 1101100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10000100   |   Command: Read   |   Tag: 1000010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10101001   |   Command: Modify |   Tag: 1010100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00110101   |   Command: Write  |   Tag: 0011010  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 54
+Address: 00101010   |   Command: Write  |   Tag: 0010101  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 127
+Address: 01001101   |   Command: Modify |   Tag: 0100110  |  block Offset: 1	(Hit!)					Instruction Cycles: 3
+Address: 01011000   |   Command: Write  |   Tag: 0101100  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 42
+Address: 01000110   |   Command: Write  |   Tag: 0100011  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 75
+Address: 01000001   |   Command: Read   |   Tag: 0100000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00010110   |   Command: Read   |   Tag: 0001011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01011001   |   Command: Read   |   Tag: 0101100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11101011   |   Command: Modify |   Tag: 1110101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11011101   |   Command: Read   |   Tag: 1101110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11001100   |   Command: Read   |   Tag: 1100110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01100100   |   Command: Read   |   Tag: 0110010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00010011   |   Command: Write  |   Tag: 0001001  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 176
+Address: 00110000   |   Command: Write  |   Tag: 0011000  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 19
+Address: 10011011   |   Command: Read   |   Tag: 1001101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11011010   |   Command: Write  |   Tag: 1101101  |  block Offset: 0	(Hit!)					Instruction Cycles: 6
+Address: 10000100   |   Command: Modify |   Tag: 1000010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11101011   |   Command: Read   |   Tag: 1110101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00110101   |   Command: Write  |   Tag: 0011010  |  block Offset: 1	(Hit!)					Instruction Cycles: 6
+Address: 01001011   |   Command: Write  |   Tag: 0100101  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 158
+Address: 01010001   |   Command: Modify |   Tag: 0101000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00010100   |   Command: Read   |   Tag: 0001010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01000010   |   Command: Read   |   Tag: 0100001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01110000   |   Command: Write  |   Tag: 0111000  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 70
+Address: 10111000   |   Command: Read   |   Tag: 1011100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00001100   |   Command: Write  |   Tag: 0000110  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 178
+Address: 10101111   |   Command: Write  |   Tag: 1010111  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 75
+Address: 00100100   |   Command: Write  |   Tag: 0010010  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 240
+Address: 00000010   |   Command: Modify |   Tag: 0000001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01101101   |   Command: Write  |   Tag: 0110110  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 254
+Address: 10010001   |   Command: Modify |   Tag: 1001000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00110000   |   Command: Write  |   Tag: 0011000  |  block Offset: 0	(Hit!)					Instruction Cycles: 6
+Address: 10001001   |   Command: Modify |   Tag: 1000100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00111110   |   Command: Modify |   Tag: 0011111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11100100   |   Command: Modify |   Tag: 1110010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01011111   |   Command: Modify |   Tag: 0101111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01110010   |   Command: Write  |   Tag: 0111001  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 36
+Address: 10001001   |   Command: Modify |   Tag: 1000100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11010111   |   Command: Read   |   Tag: 1101011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11000110   |   Command: Read   |   Tag: 1100011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01001010   |   Command: Write  |   Tag: 0100101  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 175
+Address: 01101001   |   Command: Modify |   Tag: 0110100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01110000   |   Command: Write  |   Tag: 0111000  |  block Offset: 0	(Hit!)					Instruction Cycles: 6
+Address: 00101101   |   Command: Modify |   Tag: 0010110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10000110   |   Command: Modify |   Tag: 1000011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00001101   |   Command: Modify |   Tag: 0000110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10101010   |   Command: Write  |   Tag: 1010101  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 18
+Address: 00000000   |   Command: Write  |   Tag: 0000000  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 12
+Address: 00101110   |   Command: Modify |   Tag: 0010111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11001100   |   Command: Write  |   Tag: 1100110  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 170
+Address: 11101110   |   Command: Modify |   Tag: 1110111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10110111   |   Command: Write  |   Tag: 1011011  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 114
+Address: 10010011   |   Command: Write  |   Tag: 1001001  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 176
+Address: 01001100   |   Command: Modify |   Tag: 0100110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11110111   |   Command: Read   |   Tag: 1111011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00101010   |   Command: Write  |   Tag: 0010101  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 204
+Address: 01110000   |   Command: Read   |   Tag: 0111000  |  block Offset: 0	(Hit!)					Instruction Cycles: 3
+Address: 11000101   |   Command: Modify |   Tag: 1100010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10001101   |   Command: Modify |   Tag: 1000110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10100010   |   Command: Read   |   Tag: 1010001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11001100   |   Command: Modify |   Tag: 1100110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11110110   |   Command: Read   |   Tag: 1111011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00100011   |   Command: Modify |   Tag: 0010001  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00111110   |   Command: Modify |   Tag: 0011111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00000010   |   Command: Modify |   Tag: 0000001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01011010   |   Command: Read   |   Tag: 0101101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10111010   |   Command: Modify |   Tag: 1011101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01100011   |   Command: Modify |   Tag: 0110001  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10111100   |   Command: Read   |   Tag: 1011110  |  block Offset: 0	(Hit!)					Instruction Cycles: 3
+Address: 10001110   |   Command: Read   |   Tag: 1000111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00110110   |   Command: Modify |   Tag: 0011011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01011110   |   Command: Read   |   Tag: 0101111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11010010   |   Command: Modify |   Tag: 1101001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00100011   |   Command: Write  |   Tag: 0010001  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 42
+Address: 11010101   |   Command: Write  |   Tag: 1101010  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 77
+Address: 11100110   |   Command: Read   |   Tag: 1110011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11010100   |   Command: Read   |   Tag: 1101010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00110010   |   Command: Write  |   Tag: 0011001  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 183
+Address: 10100000   |   Command: Write  |   Tag: 1010000  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 50
+Address: 10100110   |   Command: Modify |   Tag: 1010011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00100011   |   Command: Modify |   Tag: 0010001  |  block Offset: 1	(Hit!)					Instruction Cycles: 3
+Address: 01110100   |   Command: Modify |   Tag: 0111010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01111000   |   Command: Write  |   Tag: 0111100  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 74
+Address: 10000101   |   Command: Read   |   Tag: 1000010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00000010   |   Command: Write  |   Tag: 0000001  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 0
+Address: 00110111   |   Command: Modify |   Tag: 0011011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00000111   |   Command: Read   |   Tag: 0000011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11000110   |   Command: Write  |   Tag: 1100011  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 53
+Address: 01100011   |   Command: Read   |   Tag: 0110001  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11100101   |   Command: Modify |   Tag: 1110010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01010011   |   Command: Modify |   Tag: 0101001  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01001011   |   Command: Read   |   Tag: 0100101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01100000   |   Command: Write  |   Tag: 0110000  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 213
+Address: 10010001   |   Command: Write  |   Tag: 1001000  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 177
+Address: 00100100   |   Command: Write  |   Tag: 0010010  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 32
+Address: 11110011   |   Command: Modify |   Tag: 1111001  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00101110   |   Command: Write  |   Tag: 0010111  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 2
+Address: 00100000   |   Command: Modify |   Tag: 0010000  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00001101   |   Command: Read   |   Tag: 0000110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10001001   |   Command: Modify |   Tag: 1000100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11110001   |   Command: Read   |   Tag: 1111000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00010000   |   Command: Write  |   Tag: 0001000  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 188
+Address: 10110100   |   Command: Read   |   Tag: 1011010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10011110   |   Command: Modify |   Tag: 1001111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11000111   |   Command: Write  |   Tag: 1100011  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 16
+Address: 10000001   |   Command: Write  |   Tag: 1000000  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 36
+Address: 11000000   |   Command: Read   |   Tag: 1100000  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01000001   |   Command: Modify |   Tag: 0100000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11101000   |   Command: Write  |   Tag: 1110100  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 48
+Address: 11100100   |   Command: Write  |   Tag: 1110010  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 232
+Address: 01111010   |   Command: Read   |   Tag: 0111101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00001010   |   Command: Write  |   Tag: 0000101  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 96
+Address: 00110010   |   Command: Write  |   Tag: 0011001  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 46
+Address: 00001100   |   Command: Read   |   Tag: 0000110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10000010   |   Command: Write  |   Tag: 1000001  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 10
+Address: 01010011   |   Command: Modify |   Tag: 0101001  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00001000   |   Command: Read   |   Tag: 0000100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11111011   |   Command: Write  |   Tag: 1111101  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 160
+Address: 11000111   |   Command: Write  |   Tag: 1100011  |  block Offset: 1	(Hit!)					Instruction Cycles: 6
+Address: 10100000   |   Command: Write  |   Tag: 1010000  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 50
+Address: 11010001   |   Command: Modify |   Tag: 1101000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10101011   |   Command: Write  |   Tag: 1010101  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 129
+Address: 01110111   |   Command: Write  |   Tag: 0111011  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 251
+Address: 10001000   |   Command: Write  |   Tag: 1000100  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 119
+Address: 10001010   |   Command: Write  |   Tag: 1000101  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 120
+Address: 00101001   |   Command: Read   |   Tag: 0010100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10100111   |   Command: Modify |   Tag: 1010011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00101000   |   Command: Read   |   Tag: 0010100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10011110   |   Command: Modify |   Tag: 1001111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01000010   |   Command: Write  |   Tag: 0100001  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 109
+Address: 01111100   |   Command: Read   |   Tag: 0111110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01101010   |   Command: Read   |   Tag: 0110101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00011110   |   Command: Read   |   Tag: 0001111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10011111   |   Command: Write  |   Tag: 1001111  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 147
+Address: 11111110   |   Command: Read   |   Tag: 1111111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00111100   |   Command: Write  |   Tag: 0011110  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 66
+Address: 11101001   |   Command: Write  |   Tag: 1110100  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 35
+Address: 10001100   |   Command: Modify |   Tag: 1000110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11011101   |   Command: Modify |   Tag: 1101110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11100010   |   Command: Write  |   Tag: 1110001  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 138
+Address: 11110011   |   Command: Modify |   Tag: 1111001  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00111011   |   Command: Read   |   Tag: 0011101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11011010   |   Command: Read   |   Tag: 1101101  |  block Offset: 0	(Hit!)					Instruction Cycles: 3
+Address: 00011010   |   Command: Write  |   Tag: 0001101  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 159
+Address: 00110010   |   Command: Modify |   Tag: 0011001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11010010   |   Command: Read   |   Tag: 1101001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00100001   |   Command: Write  |   Tag: 0010000  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 60
+Address: 10110010   |   Command: Modify |   Tag: 1011001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11010111   |   Command: Write  |   Tag: 1101011  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 228
+Address: 00011000   |   Command: Write  |   Tag: 0001100  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 149
+Address: 00110111   |   Command: Write  |   Tag: 0011011  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 136
+Address: 11000010   |   Command: Read   |   Tag: 1100001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00000010   |   Command: Write  |   Tag: 0000001  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 145
+Address: 01101010   |   Command: Modify |   Tag: 0110101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01011001   |   Command: Read   |   Tag: 0101100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00111100   |   Command: Read   |   Tag: 0011110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01011011   |   Command: Write  |   Tag: 0101101  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 24
+Address: 10000001   |   Command: Write  |   Tag: 1000000  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 88
+Address: 01100000   |   Command: Modify |   Tag: 0110000  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01100101   |   Command: Modify |   Tag: 0110010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11101010   |   Command: Read   |   Tag: 1110101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00001001   |   Command: Write  |   Tag: 0000100  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 233
+Address: 00001111   |   Command: Read   |   Tag: 0000111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10010010   |   Command: Modify |   Tag: 1001001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10010101   |   Command: Read   |   Tag: 1001010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10100100   |   Command: Write  |   Tag: 1010010  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 112
+Address: 01100010   |   Command: Modify |   Tag: 0110001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00011100   |   Command: Read   |   Tag: 0001110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10000010   |   Command: Write  |   Tag: 1000001  |  block Offset: 0	(Hit!)					Instruction Cycles: 6
+Address: 01100001   |   Command: Read   |   Tag: 0110000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00111011   |   Command: Read   |   Tag: 0011101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01100100   |   Command: Modify |   Tag: 0110010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01101001   |   Command: Write  |   Tag: 0110100  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 55
+Address: 10100000   |   Command: Modify |   Tag: 1010000  |  block Offset: 0	(Hit!)					Instruction Cycles: 3
+Address: 10001010   |   Command: Write  |   Tag: 1000101  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 2
+Address: 01111011   |   Command: Modify |   Tag: 0111101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11111001   |   Command: Modify |   Tag: 1111100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00011010   |   Command: Modify |   Tag: 0001101  |  block Offset: 0	(Hit!)					Instruction Cycles: 3
+Address: 11001010   |   Command: Write  |   Tag: 1100101  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 129
+Address: 10101010   |   Command: Modify |   Tag: 1010101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01100100   |   Command: Write  |   Tag: 0110010  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 198
+Address: 01011100   |   Command: Modify |   Tag: 0101110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01110011   |   Command: Write  |   Tag: 0111001  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 26
+Address: 01101111   |   Command: Modify |   Tag: 0110111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10111100   |   Command: Read   |   Tag: 1011110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00001010   |   Command: Modify |   Tag: 0000101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00110111   |   Command: Write  |   Tag: 0011011  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 160
+Address: 00110111   |   Command: Modify |   Tag: 0011011  |  block Offset: 1	(Hit!)					Instruction Cycles: 3
+Address: 00101010   |   Command: Write  |   Tag: 0010101  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 91
+Address: 00101101   |   Command: Read   |   Tag: 0010110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00101001   |   Command: Read   |   Tag: 0010100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11101000   |   Command: Read   |   Tag: 1110100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10101101   |   Command: Modify |   Tag: 1010110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11010000   |   Command: Write  |   Tag: 1101000  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 115
+Address: 00101110   |   Command: Read   |   Tag: 0010111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00000010   |   Command: Modify |   Tag: 0000001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+******************************************FLUSH*****************************************			Instruction Cycles: 48
+Address: 01011001   |   Command: Modify |   Tag: 0101100  |  block Offset: 1	(Miss!)	(Compulsory)	Instruction Cycles: 6
+Address: 11010000   |   Command: Modify |   Tag: 1101000  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 6
+Address: 01011010   |   Command: Modify |   Tag: 0101101  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 6
+Address: 11011011   |   Command: Read   |   Tag: 1101101  |  block Offset: 1	(Miss!)	(Compulsory)	Instruction Cycles: 6
+Address: 00110001   |   Command: Write  |   Tag: 0011000  |  block Offset: 1	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 33
+Address: 11001010   |   Command: Read   |   Tag: 1100101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01010010   |   Command: Write  |   Tag: 0101001  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 164
+Address: 00000001   |   Command: Modify |   Tag: 0000000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01010110   |   Command: Read   |   Tag: 0101011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01110011   |   Command: Read   |   Tag: 0111001  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00000101   |   Command: Read   |   Tag: 0000010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11100100   |   Command: Write  |   Tag: 1110010  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 9
+Address: 01000111   |   Command: Read   |   Tag: 0100011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01011011   |   Command: Write  |   Tag: 0101101  |  block Offset: 1	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 105
+Address: 10110110   |   Command: Read   |   Tag: 1011011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01101000   |   Command: Read   |   Tag: 0110100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01101100   |   Command: Read   |   Tag: 0110110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01000010   |   Command: Write  |   Tag: 0100001  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 100
+Address: 10011010   |   Command: Read   |   Tag: 1001101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01010000   |   Command: Write  |   Tag: 0101000  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 199
+Address: 10000100   |   Command: Write  |   Tag: 1000010  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 138
+Address: 10110110   |   Command: Write  |   Tag: 1011011  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 226
+Address: 01000010   |   Command: Read   |   Tag: 0100001  |  block Offset: 0	(Hit!)					Instruction Cycles: 3
+Address: 10010000   |   Command: Modify |   Tag: 1001000  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10011000   |   Command: Write  |   Tag: 1001100  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 55
+Address: 01111101   |   Command: Modify |   Tag: 0111110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00100100   |   Command: Modify |   Tag: 0010010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10000010   |   Command: Read   |   Tag: 1000001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10001010   |   Command: Read   |   Tag: 1000101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00100111   |   Command: Modify |   Tag: 0010011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00101100   |   Command: Write  |   Tag: 0010110  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 202
+Address: 00000100   |   Command: Read   |   Tag: 0000010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01001011   |   Command: Modify |   Tag: 0100101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01100001   |   Command: Read   |   Tag: 0110000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01000101   |   Command: Read   |   Tag: 0100010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01000101   |   Command: Read   |   Tag: 0100010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01000010   |   Command: Write  |   Tag: 0100001  |  block Offset: 0	(Hit!)					Instruction Cycles: 6
+Address: 01100011   |   Command: Write  |   Tag: 0110001  |  block Offset: 1	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 171
+Address: 10110000   |   Command: Read   |   Tag: 1011000  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10110101   |   Command: Modify |   Tag: 1011010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01101110   |   Command: Modify |   Tag: 0110111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10100100   |   Command: Modify |   Tag: 1010010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01000100   |   Command: Modify |   Tag: 0100010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01010101   |   Command: Write  |   Tag: 0101010  |  block Offset: 1	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 130
+Address: 01010101   |   Command: Write  |   Tag: 0101010  |  block Offset: 1	(Hit!)					Instruction Cycles: 6
+Address: 00010001   |   Command: Write  |   Tag: 0001000  |  block Offset: 1	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 42
+Address: 11000001   |   Command: Write  |   Tag: 1100000  |  block Offset: 1	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 208
+Address: 01011111   |   Command: Read   |   Tag: 0101111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01000001   |   Command: Read   |   Tag: 0100000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00001010   |   Command: Read   |   Tag: 0000101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11101101   |   Command: Read   |   Tag: 1110110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00001100   |   Command: Write  |   Tag: 0000110  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 215
+Address: 11101001   |   Command: Modify |   Tag: 1110100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01011111   |   Command: Modify |   Tag: 0101111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00011000   |   Command: Write  |   Tag: 0001100  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 218
+Address: 11101011   |   Command: Modify |   Tag: 1110101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01111111   |   Command: Modify |   Tag: 0111111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01111111   |   Command: Modify |   Tag: 0111111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00111110   |   Command: Read   |   Tag: 0011111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00001110   |   Command: Modify |   Tag: 0000111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10111000   |   Command: Read   |   Tag: 1011100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00101100   |   Command: Modify |   Tag: 0010110  |  block Offset: 0	(Hit!)					Instruction Cycles: 3
+Address: 01111011   |   Command: Write  |   Tag: 0111101  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 49
+Address: 01110100   |   Command: Modify |   Tag: 0111010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11011101   |   Command: Modify |   Tag: 1101110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01001100   |   Command: Read   |   Tag: 0100110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11011110   |   Command: Modify |   Tag: 1101111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00010001   |   Command: Modify |   Tag: 0001000  |  block Offset: 1	(Hit!)					Instruction Cycles: 3
+Address: 01101100   |   Command: Read   |   Tag: 0110110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01000000   |   Command: Read   |   Tag: 0100000  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11110001   |   Command: Read   |   Tag: 1111000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11000111   |   Command: Read   |   Tag: 1100011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11010000   |   Command: Read   |   Tag: 1101000  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01010000   |   Command: Write  |   Tag: 0101000  |  block Offset: 0	(Hit!)					Instruction Cycles: 6
+Address: 11110110   |   Command: Modify |   Tag: 1111011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10101101   |   Command: Modify |   Tag: 1010110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01010010   |   Command: Read   |   Tag: 0101001  |  block Offset: 0	(Hit!)					Instruction Cycles: 3
+Address: 10010001   |   Command: Write  |   Tag: 1001000  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 193
+Address: 00110010   |   Command: Modify |   Tag: 0011001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10001001   |   Command: Write  |   Tag: 1000100  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 85
+Address: 00100111   |   Command: Write  |   Tag: 0010011  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 152
+Address: 11010111   |   Command: Write  |   Tag: 1101011  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 182
+Address: 11000100   |   Command: Write  |   Tag: 1100010  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 137
+Address: 11000101   |   Command: Read   |   Tag: 1100010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11011100   |   Command: Write  |   Tag: 1101110  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 132
+Address: 10011101   |   Command: Modify |   Tag: 1001110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01101000   |   Command: Read   |   Tag: 0110100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11011101   |   Command: Modify |   Tag: 1101110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11110011   |   Command: Write  |   Tag: 1111001  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 39
+Address: 01110011   |   Command: Write  |   Tag: 0111001  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 196
+Address: 00001111   |   Command: Read   |   Tag: 0000111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11110101   |   Command: Read   |   Tag: 1111010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01110101   |   Command: Write  |   Tag: 0111010  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 17
+Address: 01010001   |   Command: Read   |   Tag: 0101000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01001010   |   Command: Read   |   Tag: 0100101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10100001   |   Command: Read   |   Tag: 1010000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01001000   |   Command: Write  |   Tag: 0100100  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 99
+Address: 11101111   |   Command: Read   |   Tag: 1110111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01100000   |   Command: Modify |   Tag: 0110000  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10010111   |   Command: Modify |   Tag: 1001011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10011101   |   Command: Modify |   Tag: 1001110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01111110   |   Command: Read   |   Tag: 0111111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00000001   |   Command: Read   |   Tag: 0000000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00111011   |   Command: Modify |   Tag: 0011101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00111001   |   Command: Write  |   Tag: 0011100  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 145
+Address: 11001111   |   Command: Modify |   Tag: 1100111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00010010   |   Command: Read   |   Tag: 0001001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01010111   |   Command: Modify |   Tag: 0101011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01100000   |   Command: Write  |   Tag: 0110000  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 123
+Address: 01100010   |   Command: Write  |   Tag: 0110001  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 96
+Address: 01011100   |   Command: Write  |   Tag: 0101110  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 91
+Address: 11101100   |   Command: Write  |   Tag: 1110110  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 72
+Address: 10111111   |   Command: Read   |   Tag: 1011111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01011010   |   Command: Modify |   Tag: 0101101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00110010   |   Command: Write  |   Tag: 0011001  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 220
+Address: 11010111   |   Command: Modify |   Tag: 1101011  |  block Offset: 1	(Hit!)					Instruction Cycles: 3
+Address: 10010011   |   Command: Read   |   Tag: 1001001  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11000011   |   Command: Read   |   Tag: 1100001  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01010101   |   Command: Modify |   Tag: 0101010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01001100   |   Command: Read   |   Tag: 0100110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11011100   |   Command: Modify |   Tag: 1101110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01000011   |   Command: Read   |   Tag: 0100001  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00100110   |   Command: Read   |   Tag: 0010011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11100011   |   Command: Read   |   Tag: 1110001  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01101010   |   Command: Write  |   Tag: 0110101  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 80
+Address: 10010001   |   Command: Modify |   Tag: 1001000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01101001   |   Command: Modify |   Tag: 0110100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10110100   |   Command: Read   |   Tag: 1011010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00010100   |   Command: Read   |   Tag: 0001010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11001111   |   Command: Modify |   Tag: 1100111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00110010   |   Command: Read   |   Tag: 0011001  |  block Offset: 0	(Hit!)					Instruction Cycles: 3
+Address: 10110011   |   Command: Modify |   Tag: 1011001  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11010101   |   Command: Write  |   Tag: 1101010  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 117
+Address: 00100000   |   Command: Write  |   Tag: 0010000  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 98
+Address: 00111011   |   Command: Write  |   Tag: 0011101  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 243
+Address: 11010110   |   Command: Write  |   Tag: 1101011  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 213
+Address: 10110111   |   Command: Modify |   Tag: 1011011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10011011   |   Command: Write  |   Tag: 1001101  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 44
+Address: 00111101   |   Command: Modify |   Tag: 0011110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10111101   |   Command: Modify |   Tag: 1011110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10110100   |   Command: Write  |   Tag: 1011010  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 214
+Address: 01110000   |   Command: Write  |   Tag: 0111000  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 59
+Address: 00001010   |   Command: Write  |   Tag: 0000101  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 215
+Address: 11010001   |   Command: Modify |   Tag: 1101000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01111111   |   Command: Modify |   Tag: 0111111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01100111   |   Command: Read   |   Tag: 0110011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11111000   |   Command: Modify |   Tag: 1111100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10011110   |   Command: Read   |   Tag: 1001111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11011001   |   Command: Modify |   Tag: 1101100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00000101   |   Command: Read   |   Tag: 0000010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01111000   |   Command: Write  |   Tag: 0111100  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 10
+Address: 11100000   |   Command: Read   |   Tag: 1110000  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11110001   |   Command: Write  |   Tag: 1111000  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 57
+Address: 11111010   |   Command: Modify |   Tag: 1111101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01000101   |   Command: Read   |   Tag: 0100010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00000111   |   Command: Modify |   Tag: 0000011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01011001   |   Command: Read   |   Tag: 0101100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01001001   |   Command: Write  |   Tag: 0100100  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 180
+Address: 00011110   |   Command: Modify |   Tag: 0001111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10010110   |   Command: Write  |   Tag: 1001011  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 236
+Address: 10100000   |   Command: Read   |   Tag: 1010000  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10001111   |   Command: Modify |   Tag: 1000111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11110011   |   Command: Write  |   Tag: 1111001  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 120
+Address: 11000100   |   Command: Write  |   Tag: 1100010  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 228
+Address: 10101010   |   Command: Read   |   Tag: 1010101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00001110   |   Command: Modify |   Tag: 0000111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01110001   |   Command: Read   |   Tag: 0111000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00100111   |   Command: Read   |   Tag: 0010011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10101110   |   Command: Read   |   Tag: 1010111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01010011   |   Command: Read   |   Tag: 0101001  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11010100   |   Command: Write  |   Tag: 1101010  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 73
+Address: 01010001   |   Command: Modify |   Tag: 0101000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00011011   |   Command: Write  |   Tag: 0001101  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 106
+Address: 10001010   |   Command: Modify |   Tag: 1000101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01111010   |   Command: Read   |   Tag: 0111101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01000100   |   Command: Write  |   Tag: 0100010  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 27
+Address: 10101101   |   Command: Modify |   Tag: 1010110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11110101   |   Command: Modify |   Tag: 1111010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00010011   |   Command: Write  |   Tag: 0001001  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 68
+Address: 01111010   |   Command: Read   |   Tag: 0111101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00010000   |   Command: Read   |   Tag: 0001000  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11111000   |   Command: Modify |   Tag: 1111100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01011011   |   Command: Read   |   Tag: 0101101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00001001   |   Command: Write  |   Tag: 0000100  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 82
+Address: 01000001   |   Command: Read   |   Tag: 0100000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11001011   |   Command: Read   |   Tag: 1100101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01100001   |   Command: Write  |   Tag: 0110000  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 19
+Address: 00010000   |   Command: Read   |   Tag: 0001000  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10010110   |   Command: Read   |   Tag: 1001011  |  block Offset: 0	(Hit!)					Instruction Cycles: 3
+Address: 00111010   |   Command: Modify |   Tag: 0011101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00011111   |   Command: Read   |   Tag: 0001111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01110110   |   Command: Modify |   Tag: 0111011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10100000   |   Command: Modify |   Tag: 1010000  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01111011   |   Command: Read   |   Tag: 0111101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11111000   |   Command: Read   |   Tag: 1111100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10101101   |   Command: Write  |   Tag: 1010110  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 212
+Address: 01000101   |   Command: Write  |   Tag: 0100010  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 243
+Address: 00010000   |   Command: Read   |   Tag: 0001000  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01101000   |   Command: Modify |   Tag: 0110100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11111011   |   Command: Write  |   Tag: 1111101  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 69
+Address: 11010111   |   Command: Read   |   Tag: 1101011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00111010   |   Command: Read   |   Tag: 0011101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01101000   |   Command: Modify |   Tag: 0110100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10000110   |   Command: Read   |   Tag: 1000011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01110000   |   Command: Write  |   Tag: 0111000  |  block Offset: 0	(Hit!)					Instruction Cycles: 6
+Address: 11100011   |   Command: Read   |   Tag: 1110001  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11011111   |   Command: Write  |   Tag: 1101111  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 241
+Address: 10010101   |   Command: Modify |   Tag: 1001010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01101000   |   Command: Modify |   Tag: 0110100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10100001   |   Command: Modify |   Tag: 1010000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00101101   |   Command: Read   |   Tag: 0010110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11010001   |   Command: Modify |   Tag: 1101000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00100111   |   Command: Read   |   Tag: 0010011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00011101   |   Command: Write  |   Tag: 0001110  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 196
+Address: 11111101   |   Command: Modify |   Tag: 1111110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01110111   |   Command: Read   |   Tag: 0111011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10101101   |   Command: Read   |   Tag: 1010110  |  block Offset: 1	(Hit!)					Instruction Cycles: 3
+Address: 00001011   |   Command: Read   |   Tag: 0000101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00100100   |   Command: Modify |   Tag: 0010010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00110111   |   Command: Read   |   Tag: 0011011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00001000   |   Command: Modify |   Tag: 0000100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00001010   |   Command: Write  |   Tag: 0000101  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 32
+Address: 10011010   |   Command: Write  |   Tag: 1001101  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 66
+Address: 11000110   |   Command: Read   |   Tag: 1100011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10011001   |   Command: Read   |   Tag: 1001100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11111110   |   Command: Write  |   Tag: 1111111  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 251
+Address: 01000111   |   Command: Write  |   Tag: 0100011  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 154
+Address: 01010101   |   Command: Write  |   Tag: 0101010  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 115
+Address: 11100010   |   Command: Read   |   Tag: 1110001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01010111   |   Command: Read   |   Tag: 0101011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01011011   |   Command: Read   |   Tag: 0101101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01101000   |   Command: Write  |   Tag: 0110100  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 29
+Address: 10111100   |   Command: Modify |   Tag: 1011110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00110111   |   Command: Modify |   Tag: 0011011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10111010   |   Command: Write  |   Tag: 1011101  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 71
+Address: 11010101   |   Command: Modify |   Tag: 1101010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10100110   |   Command: Write  |   Tag: 1010011  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 223
+Address: 00010101   |   Command: Read   |   Tag: 0001010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11100000   |   Command: Read   |   Tag: 1110000  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11011010   |   Command: Write  |   Tag: 1101101  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 155
+Address: 00011111   |   Command: Write  |   Tag: 0001111  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 218
+Address: 10101011   |   Command: Read   |   Tag: 1010101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00100111   |   Command: Modify |   Tag: 0010011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00001110   |   Command: Write  |   Tag: 0000111  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 173
+Address: 00100111   |   Command: Write  |   Tag: 0010011  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 12
+Address: 01010010   |   Command: Modify |   Tag: 0101001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01010010   |   Command: Read   |   Tag: 0101001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10100000   |   Command: Write  |   Tag: 1010000  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 97
+Address: 01101011   |   Command: Modify |   Tag: 0110101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00110001   |   Command: Modify |   Tag: 0011000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11101011   |   Command: Modify |   Tag: 1110101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00110101   |   Command: Write  |   Tag: 0011010  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 104
+Address: 00101100   |   Command: Read   |   Tag: 0010110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11000001   |   Command: Write  |   Tag: 1100000  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 39
+Address: 10101111   |   Command: Modify |   Tag: 1010111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00111110   |   Command: Write  |   Tag: 0011111  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 186
+Address: 11100110   |   Command: Write  |   Tag: 1110011  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 254
+Address: 10101110   |   Command: Modify |   Tag: 1010111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10011011   |   Command: Modify |   Tag: 1001101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+******************************************FLUSH*****************************************			Instruction Cycles: 48
+Address: 11010100   |   Command: Read   |   Tag: 1101010  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 6
+Address: 11110010   |   Command: Write  |   Tag: 1111001  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 10
+Address: 01110101   |   Command: Modify |   Tag: 0111010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01000101   |   Command: Write  |   Tag: 0100010  |  block Offset: 1	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 9
+Address: 10111101   |   Command: Write  |   Tag: 1011110  |  block Offset: 1	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 53
+Address: 01010110   |   Command: Read   |   Tag: 0101011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11000100   |   Command: Modify |   Tag: 1100010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00111010   |   Command: Read   |   Tag: 0011101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11000100   |   Command: Read   |   Tag: 1100010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10010111   |   Command: Modify |   Tag: 1001011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10010111   |   Command: Read   |   Tag: 1001011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11101011   |   Command: Read   |   Tag: 1110101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00010111   |   Command: Write  |   Tag: 0001011  |  block Offset: 1	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 92
+Address: 11110101   |   Command: Modify |   Tag: 1111010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10010111   |   Command: Modify |   Tag: 1001011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10011010   |   Command: Modify |   Tag: 1001101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10101011   |   Command: Modify |   Tag: 1010101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01011100   |   Command: Write  |   Tag: 0101110  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 62
+Address: 11000010   |   Command: Write  |   Tag: 1100001  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 160
+Address: 00111110   |   Command: Read   |   Tag: 0011111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00000100   |   Command: Write  |   Tag: 0000010  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 50
+Address: 01011011   |   Command: Read   |   Tag: 0101101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11001010   |   Command: Write  |   Tag: 1100101  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 230
+Address: 01001001   |   Command: Read   |   Tag: 0100100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00010010   |   Command: Write  |   Tag: 0001001  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 112
+Address: 01010000   |   Command: Read   |   Tag: 0101000  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11110010   |   Command: Write  |   Tag: 1111001  |  block Offset: 0	(Hit!)					Instruction Cycles: 6
+Address: 11010111   |   Command: Modify |   Tag: 1101011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10110111   |   Command: Modify |   Tag: 1011011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00111111   |   Command: Read   |   Tag: 0011111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11100001   |   Command: Modify |   Tag: 1110000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10010100   |   Command: Read   |   Tag: 1001010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11111110   |   Command: Write  |   Tag: 1111111  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 31
+Address: 11011100   |   Command: Write  |   Tag: 1101110  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 150
+Address: 01011001   |   Command: Write  |   Tag: 0101100  |  block Offset: 1	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 85
+Address: 00101100   |   Command: Write  |   Tag: 0010110  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 14
+Address: 10001101   |   Command: Modify |   Tag: 1000110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01000100   |   Command: Read   |   Tag: 0100010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00110010   |   Command: Read   |   Tag: 0011001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10110100   |   Command: Modify |   Tag: 1011010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01100100   |   Command: Modify |   Tag: 0110010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11001100   |   Command: Write  |   Tag: 1100110  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 166
+Address: 10010001   |   Command: Modify |   Tag: 1001000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01100101   |   Command: Read   |   Tag: 0110010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11100111   |   Command: Read   |   Tag: 1110011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10001010   |   Command: Modify |   Tag: 1000101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01000110   |   Command: Modify |   Tag: 0100011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11101010   |   Command: Read   |   Tag: 1110101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11100010   |   Command: Modify |   Tag: 1110001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11100010   |   Command: Read   |   Tag: 1110001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10100111   |   Command: Read   |   Tag: 1010011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11001111   |   Command: Modify |   Tag: 1100111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01010110   |   Command: Modify |   Tag: 0101011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01001011   |   Command: Modify |   Tag: 0100101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00000111   |   Command: Modify |   Tag: 0000011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10110100   |   Command: Read   |   Tag: 1011010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11011110   |   Command: Write  |   Tag: 1101111  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 193
+Address: 00000101   |   Command: Modify |   Tag: 0000010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11101100   |   Command: Write  |   Tag: 1110110  |  block Offset: 0	(Miss!)	(Compulsory)	Instruction Cycles: 9	Replaced: 24
+Address: 01010011   |   Command: Modify |   Tag: 0101001  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10001101   |   Command: Read   |   Tag: 1000110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10001010   |   Command: Modify |   Tag: 1000101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00111111   |   Command: Read   |   Tag: 0011111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10001101   |   Command: Write  |   Tag: 1000110  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 89
+Address: 01011100   |   Command: Modify |   Tag: 0101110  |  block Offset: 0	(Hit!)					Instruction Cycles: 3
+Address: 01101101   |   Command: Write  |   Tag: 0110110  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 92
+Address: 10011011   |   Command: Write  |   Tag: 1001101  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 109
+Address: 01111111   |   Command: Write  |   Tag: 0111111  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 18
+Address: 00110101   |   Command: Modify |   Tag: 0011010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01010101   |   Command: Read   |   Tag: 0101010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11100010   |   Command: Modify |   Tag: 1110001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11001010   |   Command: Write  |   Tag: 1100101  |  block Offset: 0	(Hit!)					Instruction Cycles: 6
+Address: 00110011   |   Command: Read   |   Tag: 0011001  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11110110   |   Command: Write  |   Tag: 1111011  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 155
+Address: 01010010   |   Command: Modify |   Tag: 0101001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00101001   |   Command: Write  |   Tag: 0010100  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 69
+Address: 00000000   |   Command: Read   |   Tag: 0000000  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10010011   |   Command: Write  |   Tag: 1001001  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 204
+Address: 10101111   |   Command: Modify |   Tag: 1010111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11110010   |   Command: Modify |   Tag: 1111001  |  block Offset: 0	(Hit!)					Instruction Cycles: 6
+Address: 00010000   |   Command: Write  |   Tag: 0001000  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 147
+Address: 11110100   |   Command: Write  |   Tag: 1111010  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 254
+Address: 11010001   |   Command: Read   |   Tag: 1101000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00010101   |   Command: Read   |   Tag: 0001010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10010010   |   Command: Read   |   Tag: 1001001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11100100   |   Command: Read   |   Tag: 1110010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10011001   |   Command: Write  |   Tag: 1001100  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 189
+Address: 10111101   |   Command: Modify |   Tag: 1011110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01001001   |   Command: Read   |   Tag: 0100100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00010110   |   Command: Modify |   Tag: 0001011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10011001   |   Command: Read   |   Tag: 1001100  |  block Offset: 1	(Hit!)					Instruction Cycles: 3
+Address: 10110000   |   Command: Write  |   Tag: 1011000  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 222
+Address: 00111111   |   Command: Write  |   Tag: 0011111  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 141
+Address: 10001110   |   Command: Read   |   Tag: 1000111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00001010   |   Command: Modify |   Tag: 0000101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10001011   |   Command: Modify |   Tag: 1000101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01111000   |   Command: Write  |   Tag: 0111100  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 242
+Address: 11100010   |   Command: Write  |   Tag: 1110001  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 176
+Address: 11000110   |   Command: Modify |   Tag: 1100011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11100000   |   Command: Write  |   Tag: 1110000  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 44
+Address: 00010000   |   Command: Modify |   Tag: 0001000  |  block Offset: 0	(Hit!)					Instruction Cycles: 3
+Address: 00000001   |   Command: Modify |   Tag: 0000000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11101010   |   Command: Modify |   Tag: 1110101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00000010   |   Command: Read   |   Tag: 0000001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11110010   |   Command: Write  |   Tag: 1111001  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 23
+Address: 00111110   |   Command: Modify |   Tag: 0011111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01001111   |   Command: Write  |   Tag: 0100111  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 120
+Address: 11011011   |   Command: Write  |   Tag: 1101101  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 246
+Address: 00011111   |   Command: Modify |   Tag: 0001111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11100010   |   Command: Modify |   Tag: 1110001  |  block Offset: 0	(Hit!)					Instruction Cycles: 3
+Address: 00000110   |   Command: Modify |   Tag: 0000011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10101100   |   Command: Read   |   Tag: 1010110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10001011   |   Command: Read   |   Tag: 1000101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00000000   |   Command: Modify |   Tag: 0000000  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00000101   |   Command: Modify |   Tag: 0000010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00010101   |   Command: Read   |   Tag: 0001010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10111110   |   Command: Modify |   Tag: 1011111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00110000   |   Command: Read   |   Tag: 0011000  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00110001   |   Command: Read   |   Tag: 0011000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00101111   |   Command: Modify |   Tag: 0010111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10011101   |   Command: Modify |   Tag: 1001110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10011110   |   Command: Read   |   Tag: 1001111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01101010   |   Command: Read   |   Tag: 0110101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10111000   |   Command: Read   |   Tag: 1011100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11110111   |   Command: Modify |   Tag: 1111011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11101100   |   Command: Write  |   Tag: 1110110  |  block Offset: 0	(Hit!)					Instruction Cycles: 6
+Address: 11001100   |   Command: Modify |   Tag: 1100110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00001000   |   Command: Read   |   Tag: 0000100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01110100   |   Command: Modify |   Tag: 0111010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11100000   |   Command: Read   |   Tag: 1110000  |  block Offset: 0	(Hit!)					Instruction Cycles: 3
+Address: 11010110   |   Command: Read   |   Tag: 1101011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00111001   |   Command: Write  |   Tag: 0011100  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 224
+Address: 01001101   |   Command: Modify |   Tag: 0100110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11100001   |   Command: Read   |   Tag: 1110000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00010001   |   Command: Read   |   Tag: 0001000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11101000   |   Command: Modify |   Tag: 1110100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01111011   |   Command: Write  |   Tag: 0111101  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 220
+Address: 00101101   |   Command: Read   |   Tag: 0010110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11110011   |   Command: Write  |   Tag: 1111001  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 244
+Address: 01100100   |   Command: Read   |   Tag: 0110010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01011000   |   Command: Write  |   Tag: 0101100  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 4
+Address: 01101011   |   Command: Write  |   Tag: 0110101  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 242
+Address: 00101100   |   Command: Modify |   Tag: 0010110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10010100   |   Command: Modify |   Tag: 1001010  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00111111   |   Command: Modify |   Tag: 0011111  |  block Offset: 1	(Hit!)					Instruction Cycles: 3
+Address: 11011010   |   Command: Read   |   Tag: 1101101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01110111   |   Command: Read   |   Tag: 0111011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00011000   |   Command: Write  |   Tag: 0001100  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 63
+Address: 10110101   |   Command: Modify |   Tag: 1011010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01011100   |   Command: Read   |   Tag: 0101110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10101101   |   Command: Modify |   Tag: 1010110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11010110   |   Command: Modify |   Tag: 1101011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10111100   |   Command: Modify |   Tag: 1011110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00011001   |   Command: Read   |   Tag: 0001100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11000001   |   Command: Read   |   Tag: 1100000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11110110   |   Command: Write  |   Tag: 1111011  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 57
+Address: 00110101   |   Command: Write  |   Tag: 0011010  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 123
+Address: 01101101   |   Command: Modify |   Tag: 0110110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01000110   |   Command: Read   |   Tag: 0100011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10000011   |   Command: Write  |   Tag: 1000001  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 107
+Address: 00000111   |   Command: Read   |   Tag: 0000011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01101110   |   Command: Read   |   Tag: 0110111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00111111   |   Command: Write  |   Tag: 0011111  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 88
+Address: 10110010   |   Command: Modify |   Tag: 1011001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01101111   |   Command: Read   |   Tag: 0110111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00110101   |   Command: Modify |   Tag: 0011010  |  block Offset: 1	(Hit!)					Instruction Cycles: 3
+Address: 01010010   |   Command: Write  |   Tag: 0101001  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 41
+Address: 00001110   |   Command: Modify |   Tag: 0000111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10110101   |   Command: Modify |   Tag: 1011010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10110100   |   Command: Write  |   Tag: 1011010  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 153
+Address: 00011110   |   Command: Read   |   Tag: 0001111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11110001   |   Command: Modify |   Tag: 1111000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00010110   |   Command: Write  |   Tag: 0001011  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 79
+Address: 01000101   |   Command: Modify |   Tag: 0100010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00111101   |   Command: Modify |   Tag: 0011110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10101011   |   Command: Modify |   Tag: 1010101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10101001   |   Command: Modify |   Tag: 1010100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10111100   |   Command: Write  |   Tag: 1011110  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 246
+Address: 01010101   |   Command: Read   |   Tag: 0101010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00101101   |   Command: Modify |   Tag: 0010110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00100010   |   Command: Modify |   Tag: 0010001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10111001   |   Command: Modify |   Tag: 1011100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00100111   |   Command: Modify |   Tag: 0010011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00000111   |   Command: Modify |   Tag: 0000011  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00011001   |   Command: Read   |   Tag: 0001100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01101010   |   Command: Write  |   Tag: 0110101  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 226
+Address: 11111001   |   Command: Write  |   Tag: 1111100  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 202
+Address: 00110111   |   Command: Write  |   Tag: 0011011  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 106
+Address: 01001011   |   Command: Read   |   Tag: 0100101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11110110   |   Command: Read   |   Tag: 1111011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11101000   |   Command: Write  |   Tag: 1110100  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 63
+Address: 00000000   |   Command: Write  |   Tag: 0000000  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 232
+Address: 01110111   |   Command: Write  |   Tag: 0111011  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 16
+Address: 11110011   |   Command: Modify |   Tag: 1111001  |  block Offset: 1	(Hit!)					Instruction Cycles: 3
+Address: 11100010   |   Command: Read   |   Tag: 1110001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10111111   |   Command: Modify |   Tag: 1011111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11001111   |   Command: Modify |   Tag: 1100111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11100000   |   Command: Read   |   Tag: 1110000  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11011101   |   Command: Write  |   Tag: 1101110  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 24
+Address: 00000111   |   Command: Write  |   Tag: 0000011  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 219
+Address: 10100000   |   Command: Write  |   Tag: 1010000  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 243
+Address: 00101000   |   Command: Modify |   Tag: 0010100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10011110   |   Command: Read   |   Tag: 1001111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11110010   |   Command: Modify |   Tag: 1111001  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10010101   |   Command: Write  |   Tag: 1001010  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 55
+Address: 00101011   |   Command: Read   |   Tag: 0010101  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00000100   |   Command: Write  |   Tag: 0000010  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 249
+Address: 11111000   |   Command: Read   |   Tag: 1111100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01011111   |   Command: Read   |   Tag: 0101111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11000001   |   Command: Modify |   Tag: 1100000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10111100   |   Command: Write  |   Tag: 1011110  |  block Offset: 0	(Hit!)					Instruction Cycles: 6
+Address: 00100110   |   Command: Write  |   Tag: 0010011  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 53
+Address: 10001001   |   Command: Modify |   Tag: 1000100  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10111100   |   Command: Modify |   Tag: 1011110  |  block Offset: 0	(Hit!)					Instruction Cycles: 3
+Address: 01100110   |   Command: Modify |   Tag: 0110011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00010110   |   Command: Read   |   Tag: 0001011  |  block Offset: 0	(Hit!)					Instruction Cycles: 6
+Address: 10111101   |   Command: Write  |   Tag: 1011110  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 188
+Address: 01010101   |   Command: Read   |   Tag: 0101010  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01011110   |   Command: Read   |   Tag: 0101111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00001111   |   Command: Write  |   Tag: 0000111  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 189
+Address: 11011110   |   Command: Read   |   Tag: 1101111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10011010   |   Command: Modify |   Tag: 1001101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01011100   |   Command: Write  |   Tag: 0101110  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 7
+Address: 10000110   |   Command: Read   |   Tag: 1000011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10100011   |   Command: Read   |   Tag: 1010001  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11000001   |   Command: Read   |   Tag: 1100000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00011100   |   Command: Read   |   Tag: 0001110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10010001   |   Command: Read   |   Tag: 1001000  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00011010   |   Command: Modify |   Tag: 0001101  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11101001   |   Command: Write  |   Tag: 1110100  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 15
+Address: 00011000   |   Command: Read   |   Tag: 0001100  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01101011   |   Command: Write  |   Tag: 0110101  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 92
+Address: 11001100   |   Command: Read   |   Tag: 1100110  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00111101   |   Command: Write  |   Tag: 0011110  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 38
+Address: 10111110   |   Command: Modify |   Tag: 1011111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00011110   |   Command: Modify |   Tag: 0001111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 11100100   |   Command: Write  |   Tag: 1110010  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 221
+Address: 01111111   |   Command: Write  |   Tag: 0111111  |  block Offset: 1	(Hit!)					Instruction Cycles: 6
+Address: 00000011   |   Command: Modify |   Tag: 0000001  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10000011   |   Command: Modify |   Tag: 1000001  |  block Offset: 1	(Hit!)					Instruction Cycles: 3
+Address: 10000110   |   Command: Read   |   Tag: 1000011  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01101011   |   Command: Modify |   Tag: 0110101  |  block Offset: 1	(Hit!)					Instruction Cycles: 3
+Address: 01000011   |   Command: Read   |   Tag: 0100001  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 10010111   |   Command: Write  |   Tag: 1001011  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 127
+Address: 10111101   |   Command: Read   |   Tag: 1011110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01111110   |   Command: Modify |   Tag: 0111111  |  block Offset: 0	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01101001   |   Command: Write  |   Tag: 0110100  |  block Offset: 1	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 4
+Address: 11011101   |   Command: Read   |   Tag: 1101110  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 01000011   |   Command: Read   |   Tag: 0100001  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
+Address: 00000100   |   Command: Write  |   Tag: 0000010  |  block Offset: 0	(Miss!)	( Capacity )	Instruction Cycles: 12	Replaced: 107
+Address: 00101111   |   Command: Read   |   Tag: 0010111  |  block Offset: 1	(Miss!)	( Conflict )	Instruction Cycles: 6
 
-Total Cycles: 180
+Total Cycles: 6030
 
-Hit Rate: 25.00 %
+Hit Rate: 5.73 %
 
-Miss Rate: 75.00 %
+Miss Rate: 94.27 %

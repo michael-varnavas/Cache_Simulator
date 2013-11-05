@@ -657,6 +657,7 @@ int miss_flag=0;
 int icycles=0;
 int hit_counter=0;
 int miss_counter=0;
+int replaced;
 
     struct cache_block *root; /* This will be the unchanging first node */
  
@@ -703,6 +704,7 @@ errorCode =fopen_s(&fp,"Arxeio Eksodou","w+");						//Opening a file. Mode: Writ
 for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop for all the range of possible address calls multiplied by a defined constant
 	{
 		hit_flag=0;
+		replaced=-1;
 		icycles=0;
 		miss_flag=0;
 		read_flag=0;
@@ -946,7 +948,7 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 										count_cycles=count_cycles+read_cycles_cache+write_cycles_ram;
 										icycles=read_cycles_cache+write_cycles_ram;
 									}
-										
+											replaced=conductor->block_offset[block_offset];
 											conductor->block_offset[block_offset]=address_dec;
 											conductor->valid=1;
 											conductor->use_time=0;
@@ -999,7 +1001,8 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 									{
 										count_cycles=count_cycles+read_cycles_cache+write_cycles_ram;
 										icycles=read_cycles_cache+write_cycles_ram;
-									}
+									}				
+													replaced=find->block_offset[block_offset];
 													find->block_offset[block_offset]=address_dec;
 													find->valid=1;
 													find->use_time=0;
@@ -1048,6 +1051,7 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 										count_cycles=count_cycles+read_cycles_cache+write_cycles_ram;
 										icycles=read_cycles_cache+write_cycles_ram;
 									}
+										replaced=conductor->block_offset[block_offset];
 										conductor->block_offset[block_offset]=address_dec;
 										conductor->use_time=0;
 										conductor->valid=1;
@@ -1107,6 +1111,7 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 										count_cycles=count_cycles+read_cycles_cache+write_cycles_ram;
 										icycles=read_cycles_cache+write_cycles_ram;
 									}
+									replaced=fifo->block_offset[block_offset];
 			for(k=0;k<30;k++)
 					{
 						fifo->block_offset[k]=-1;
@@ -1135,6 +1140,7 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 					}
 					lru=lru->next;
 				}
+				replaced=maximum->block_offset[block_offset];
 				for(k=0;k<30;k++)
 					{
 						maximum->block_offset[k]=-1;
@@ -1182,6 +1188,7 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 				random=random->next;
 				random_num=random_num-1;
 			}
+			replaced=random->block_offset[block_offset];
 			for(k=0;k<30;k++)
 					{
 						random->block_offset[k]=-1;
@@ -1321,6 +1328,8 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 		}
 		}
 		fprintf(fp,"\tInstruction Cycles: %d",icycles);
+		if(((char)command=='W')&&(hit_flag==0)&&(replaced!=-1))
+		fprintf(fp,"\tReplaced: %d",replaced);
 				fprintf(fp,"\n");
 		
 		
@@ -1381,6 +1390,7 @@ int hit_counter=0;
 int miss_counter=0;
 int miss_flag=0;
 int read_flag=0;
+int replaced=0;
 
 struct cache_block *root; /* This will be the unchanging first node */
 struct cache_block *conductor,*find,*fifo,*old,*lru,*maximum,*random,*tmp;  
@@ -1449,6 +1459,7 @@ srand((int)time(NULL));												//rand() is based on time so the numbers are 
 for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop for all the range of possible address calls multiplied by a defined constant
 	{
 		miss_flag=0;
+		replaced=-1;
 		read_flag=0;
 		hit_flag=0;
 		icycles=0;
@@ -1703,6 +1714,7 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 										count_cycles=count_cycles+read_cycles_cache+write_cycles_ram;
 										icycles=read_cycles_cache+write_cycles_ram;
 									}
+									replaced=conductor->block_offset[block_offset];
 									conductor->block_offset[block_offset]=address_dec;
 									conductor->tag=tag_dec;
 									conductor->valid=1;
@@ -1748,6 +1760,7 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 			{
 				fifo=fifo->next;
 			}
+			replaced=fifo->block_offset[block_offset];
 			for(k=0;k<30;k++)
 					{
 						fifo->block_offset[k]=-1;
@@ -1780,6 +1793,7 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 			{
 				lru=lru->next;
 			}
+			replaced=lru->block_offset[block_offset];
 			for(k=0;k<30;k++)
 					{
 						lru->block_offset[k]=-1;
@@ -1818,6 +1832,7 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 			{
 				random=random->next;
 			}
+			replaced=random->block_offset[block_offset];
 			for(k=0;k<30;k++)
 					{
 						random->block_offset[k]=-1;
@@ -1978,6 +1993,8 @@ for (i = 0; i <(NUM_MUL*ram_size); i++)								//This for statement will loop fo
 		
 		}
 				fprintf(fp,"\tInstruction Cycles: %d",icycles);
+				if(((char)command=='W')&&(hit_flag==0)&&(replaced!=-1))
+				fprintf(fp,"\tReplaced: %d",replaced);
 				fprintf(fp,"\n");
 		}
 		fprintf(fp,"\nTotal Cycles: %d\n",count_cycles);
