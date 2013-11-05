@@ -18,7 +18,7 @@ int num_of_flush;		//Minimum amount of Flushes
 int words_in_block;	//Amount of words in each block
 int type_of_cache;	//0 = Direct Mapped. 1= fully Associative. 2= N-way Associative
 int num_of_ways;		//In case of N-way, # of ways
-int read_cycles_cache;
+int read_cycles_cache; //read cycles
 int read_cycles_ram;
 int write_cycles_ram;
 int write_cycles_cache;
@@ -2044,6 +2044,7 @@ char entoli[4]={'R','W','M','F'};
 int random_num2;
 
 parameters_parser();
+printf("Arxeio Parametrwn has been parsed!\n");
 
 
 cache_size=(cache_size_bytes/word_size_bytes);//Cache Size (Entries)
