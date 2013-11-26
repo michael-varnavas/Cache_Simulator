@@ -1,0 +1,50 @@
+﻿Build started 26-Nov-13 14:42:05.
+     1>Project "C:\Users\Michael\Desktop\MileStone 3\Cache_Simulator\Cache_Simulator\Cache_Simulator.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt Source.c
+         Source.c
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(75): warning C4101: 'i' : unreferenced local variable
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(224): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(256): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(561): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(562): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(292): warning C4101: 'tmp3' : unreferenced local variable
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(292): warning C4101: 'tmp2' : unreferenced local variable
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(251): warning C4101: 'size' : unreferenced local variable
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(1453): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(1603): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(1449): warning C4101: 'size' : unreferenced local variable
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(1919): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(2652): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(2813): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(2681): warning C4101: 'old' : unreferenced local variable
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(2681): warning C4101: 'maximum' : unreferenced local variable
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(2681): warning C4101: 'find' : unreferenced local variable
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(3312): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(3507): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(3308): warning C4101: 'size' : unreferenced local variable
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(4164): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(5196): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(5357): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(5225): warning C4101: 'old' : unreferenced local variable
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(5225): warning C4101: 'maximum' : unreferenced local variable
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(5225): warning C4101: 'find' : unreferenced local variable
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(6063): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(6074): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(6131): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(6139): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(6147): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(6163): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(6213): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(6214): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(6299): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(6319): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\michael\desktop\milestone 3\cache_simulator\cache_simulator\source.c(6359): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Michael\Desktop\MileStone 3\Cache_Simulator\Debug\Cache_Simulator.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Michael\Desktop\MileStone 3\Cache_Simulator\Debug\Cache_Simulator.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Michael\Desktop\MileStone 3\Cache_Simulator\Debug\Cache_Simulator.lib" /MACHINE:X86 Debug\Source.obj
+         Cache_Simulator.vcxproj -> C:\Users\Michael\Desktop\MileStone 3\Cache_Simulator\Debug\Cache_Simulator.exe
+     1>Done Building Project "C:\Users\Michael\Desktop\MileStone 3\Cache_Simulator\Cache_Simulator\Cache_Simulator.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.29

@@ -1,32 +1,9 @@
-﻿Build started 05-Nov-13 18:12:36.
+﻿Build started 26-Nov-13 0:45:04.
      1>Project "C:\Users\Michael\Documents\GitHub\Cache_Simulator\MileStone 2\Cache_Simulator\Cache_Simulator\Cache_Simulator.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt Source.c
-         Source.c
-     1>c:\users\michael\documents\github\cache_simulator\milestone 2\cache_simulator\cache_simulator\source.c(55): warning C4101: 'i' : unreferenced local variable
-     1>c:\users\michael\documents\github\cache_simulator\milestone 2\cache_simulator\cache_simulator\source.c(147): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\michael\documents\github\cache_simulator\milestone 2\cache_simulator\cache_simulator\source.c(178): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\michael\documents\github\cache_simulator\milestone 2\cache_simulator\cache_simulator\source.c(328): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\michael\documents\github\cache_simulator\milestone 2\cache_simulator\cache_simulator\source.c(174): warning C4101: 'size' : unreferenced local variable
-     1>c:\users\michael\documents\github\cache_simulator\milestone 2\cache_simulator\cache_simulator\source.c(641): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\michael\documents\github\cache_simulator\milestone 2\cache_simulator\cache_simulator\source.c(1371): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\michael\documents\github\cache_simulator\milestone 2\cache_simulator\cache_simulator\source.c(1533): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\michael\documents\github\cache_simulator\milestone 2\cache_simulator\cache_simulator\source.c(1400): warning C4101: 'old' : unreferenced local variable
-     1>c:\users\michael\documents\github\cache_simulator\milestone 2\cache_simulator\cache_simulator\source.c(1400): warning C4101: 'maximum' : unreferenced local variable
-     1>c:\users\michael\documents\github\cache_simulator\milestone 2\cache_simulator\cache_simulator\source.c(1400): warning C4101: 'find' : unreferenced local variable
-     1>c:\users\michael\documents\github\cache_simulator\milestone 2\cache_simulator\cache_simulator\source.c(2059): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\michael\documents\github\cache_simulator\milestone 2\cache_simulator\cache_simulator\source.c(2070): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\michael\documents\github\cache_simulator\milestone 2\cache_simulator\cache_simulator\source.c(2115): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\michael\documents\github\cache_simulator\milestone 2\cache_simulator\cache_simulator\source.c(2123): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\michael\documents\github\cache_simulator\milestone 2\cache_simulator\cache_simulator\source.c(2131): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\michael\documents\github\cache_simulator\milestone 2\cache_simulator\cache_simulator\source.c(2147): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\michael\documents\github\cache_simulator\milestone 2\cache_simulator\cache_simulator\source.c(2185): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\michael\documents\github\cache_simulator\milestone 2\cache_simulator\cache_simulator\source.c(2186): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Michael\Documents\GitHub\Cache_Simulator\MileStone 2\Cache_Simulator\Debug\Cache_Simulator.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Michael\Documents\GitHub\Cache_Simulator\MileStone 2\Cache_Simulator\Debug\Cache_Simulator.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Michael\Documents\GitHub\Cache_Simulator\MileStone 2\Cache_Simulator\Debug\Cache_Simulator.lib" /MACHINE:X86 Debug\Source.obj
+     1>Link:
          Cache_Simulator.vcxproj -> C:\Users\Michael\Documents\GitHub\Cache_Simulator\MileStone 2\Cache_Simulator\Debug\Cache_Simulator.exe
      1>Done Building Project "C:\Users\Michael\Documents\GitHub\Cache_Simulator\MileStone 2\Cache_Simulator\Cache_Simulator\Cache_Simulator.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.90
+Time Elapsed 00:00:00.37

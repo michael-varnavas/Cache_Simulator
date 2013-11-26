@@ -1,0 +1,24 @@
+L1 Cache Size: 512 , 512 , 64
+L2 Cache Size: 512 , 512 , 32
+Victim Cache: 256
+RAM Size: 1024
+Word Size: 4
+Write (Back(0)/Through(1)): 0
+Write (No Allocate(0)/Allocate(1)): 0
+Words in Block: 2
+Type of Cache(D Mapped(0)/Fully Associative(1)/N-Ways(2)): 0
+Data Multiplier: 3
+Number of Ways: 4
+Number of Flushes: 3
+Cycles Read from Cache: 3
+Cycles Read from RAM: 5
+Cycles Write to RAM: 5
+Cycles Write to Cache: 4
+Cycles Read from L2 Cache: 5
+Cycles Write to L2 Cache: 5
+Cycles Read from Victim Cache: 5
+Cycles Write to Victim Cache: 5
+Policy(FIFO(0)/LRU(1)/RANDOM(2)): 0
+L2 Exclusive(0) / Inclusive (1): 0
+Enable L2 Cache: 0
+Enable Victim: 0
